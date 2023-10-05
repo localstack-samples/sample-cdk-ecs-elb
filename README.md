@@ -76,6 +76,32 @@ make test
 
 Ensure that all test cases pass and pay attention to any output that is displayed. This step should validate that the application is functioning as expected.
 
+Alternatively, you can also check the application by curling the ALB endpoint. You can find the ALB endpoint in the LocalStack console or by running the following command:
+
+```bash
+awslocal elbv2 describe-load-balancers --names serviceslb --query 'LoadBalancers[0].DNSName'
+```
+
+Now you can curl the endpoint using the following command:
+
+```bash
+curl serviceslb.elb.localhost.localstack.cloud:4566
+```
+
+The output should be similar to the following:
+
+```bash
+{"message":"Hello, Welcome to Localstack!"}
+```
+
+### Step 4: Clean Up 🧹
+
+To delete the application from LocalStack, run the following command:
+
+```bash
+make destroy-local
+```
+
 ## Deploying the Application on AWS ☁️
 
 ### Step 1: Deploy the Application 🚢
@@ -94,6 +120,32 @@ Run the application test cases using the following command:
 
 ```bash
 make test
+```
+
+Alternatively, you can also check the application by curling the ALB endpoint. You can find the ALB endpoint in the AWS console or by running the following command:
+
+```bash
+aws elbv2 describe-load-balancers --names serviceslb --query 'LoadBalancers[0].DNSName' --output text
+```
+
+Now you can curl the endpoint using the following command:
+
+```bash
+curl <ALB_ENDPOINT-FROM_ABOVE_COMMAND>
+```
+
+The output should be similar to the following:
+
+```bash
+{"message":"Hello, Welcome to Localstack!"}
+```
+
+## 🧹 Cleaning Up
+
+To delete the application from AWS, run the following command:
+
+```bash
+make destroy
 ```
 
 ## 🚀 Configuring Visual Studio Code for Efficient Remote Node.js Debugging

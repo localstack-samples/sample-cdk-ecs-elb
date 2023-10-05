@@ -5,9 +5,6 @@ const ec2 = require('aws-cdk-lib/aws-ec2')
 const ecs = require('aws-cdk-lib/aws-ecs')
 const elbv2 = require('aws-cdk-lib/aws-elasticloadbalancingv2')
 const ecr = require('aws-cdk-lib/aws-ecr')
-// const cdk = require('@aws-cdk/core')
-
-// const sqs = require('aws-cdk-lib/aws-sqs');
 
 class RepoStack extends Stack {
   /**
@@ -62,10 +59,6 @@ class RepoStack extends Stack {
 			],
 			essential: true
 		})
-		// container.addPortMappings({
-		// 	containerPort: 3000,
-		// 	protocol: ecs.Protocol.TCP
-		// })
 
     // create service
 		const service = new ecs.FargateService(
