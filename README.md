@@ -22,7 +22,7 @@ The sample application, utilizing the AWS Cloud Development Kit (AWS CDK) 🛠�
 - **🎯 Target Group and Health Checks:** 
   Targets (in this case, the ECS service) are registered with a target group, which the ALB uses to route traffic to. Health check settings ensure that traffic is routed only to healthy targets.
 
-  ## Getting Started 🏁
+## Getting Started 🏁
 
 This guide assumes that you have cloned the repository and are in the project root directory. The following steps will guide you through the process of building, deploying, and running the sample application both locally and on AWS. We have a [sample application](https://github.com/localstack-samples/sample-cdk-ecs-elb/tree/main/src) that listens on port `3000` and returns a JSON response.
 
