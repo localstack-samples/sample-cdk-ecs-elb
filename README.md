@@ -24,7 +24,7 @@ The sample application, utilizing the AWS Cloud Development Kit (AWS CDK) 🛠�
 
   ## Getting Started 🏁
 
-This guide assumes that you have cloned the repository and are in the project root directory. The following steps will guide you through the process of building, deploying, and running the sample application both locally and on AWS.
+This guide assumes that you have cloned the repository and are in the project root directory. The following steps will guide you through the process of building, deploying, and running the sample application both locally and on AWS. We have a [sample application](https://github.com/localstack-samples/sample-cdk-ecs-elb/tree/main/src) that listens on port `3000` and returns a JSON response.
 
 ### Prerequisites 🧰
 
@@ -158,7 +158,7 @@ Setting up Visual Studio Code for remote Node.js debugging enables smoother and 
    
    ```bash
     export ECS_DOCKER_FLAGS="e NODE_OPTIONS=--inspect-brk=0.0.0.0:9229 -p 9229:9229
-    ```
+  ```
 
 2️⃣ **Adding a Task to Wait for Remote Debugger Server** 🕰️
 
