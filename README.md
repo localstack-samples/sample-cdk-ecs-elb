@@ -96,7 +96,7 @@ Run the application test cases using the following command:
 make test
 ```
 
-## 🚀 Configuring Visual Studio Code for Efficient Remote Node.js Debugging 🚀
+## 🚀 Configuring Visual Studio Code for Efficient Remote Node.js Debugging
 
 Setting up Visual Studio Code for remote Node.js debugging enables smoother and more intuitive development workflows. This guide will walk you through the essential steps to configure your VSCode efficiently for remote debugging of your Node.js applications. 🛠️🔍
 
