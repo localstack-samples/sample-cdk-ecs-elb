@@ -152,7 +152,15 @@ make destroy
 
 Setting up Visual Studio Code for remote Node.js debugging enables smoother and more intuitive development workflows. This guide will walk you through the essential steps to configure your VSCode efficiently for remote debugging of your Node.js applications. 🛠️🔍
 
-1️⃣ **Adding a Task to Wait for Remote Debugger Server** 🕰️
+1️⃣ **Configure LocalStack for remote Node.js debugging** 🛠️
+
+   First, we need to configure LocalStack to enable remote debugging of Node.js applications. To do so, we need to set the `ECS_DOCKER_FLAGS` to enable the debugger using `NODE_OPTIONS`:
+   
+   ```bash
+    export ECS_DOCKER_FLAGS="e NODE_OPTIONS=--inspect-brk=0.0.0.0:9229 -p 9229:9229
+    ```
+
+2️⃣ **Adding a Task to Wait for Remote Debugger Server** 🕰️
 
    First, let's ensure that VSCode waits for the remote debugger server to be available. Add a new task by creating or modifying the `.vscode/tasks.json` file in your project directory.
 
@@ -169,7 +177,7 @@ Setting up Visual Studio Code for remote Node.js debugging enables smoother and 
    }
    ```
 
-2️⃣ **Setting up Debugging Configuration** 🎛️
+3️⃣ **Setting up Debugging Configuration** 🎛️
 
    Next, define how VSCode should connect to the remote Node.js application. Create a new `launch.json` file or modify an existing one from the *Run and Debug* tab, then add the following configuration.
 
@@ -191,7 +199,7 @@ Setting up Visual Studio Code for remote Node.js debugging enables smoother and 
    }
    ```
 
-3️⃣ **Running the Debugger** 🏃
+4️⃣ **Running the Debugger** 🏃
 
    Finally, run the debugger by selecting the *Attach to Remote Node.js* configuration from the *Run and Debug* tab. You can now set breakpoints and debug your Node.js application running in a Docker container. 🐳
 
