@@ -67,10 +67,6 @@ export LOCALSTACK_API_KEY=<YOUR_API_KEY>
 make start-localstack
 ```
 
-We specified `DEBUG=1` to get the printed LocalStack logs directly in the terminal to help us visualize the background
-tasks in action. If you prefer running LocalStack in detached mode, you can add the `-d` flag to the `localstack start`
-command, and use Docker Desktop to view the logs.
-
 ### Step 2: Deploy the Application 🚢
 
 Deploy your application locally using the following command:
