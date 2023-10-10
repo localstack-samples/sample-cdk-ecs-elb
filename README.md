@@ -4,6 +4,8 @@ The sample application, utilizing the AWS Cloud Development Kit (AWS CDK) 🛠�
 containerized application 📦 on AWS Fargate within an Amazon ECS (Elastic Container Service) cluster. The CDK
 infrastructure-as-code model allows developers to define cloud resources using familiar programming languages 🖥️.
 
+![Solution](./docs/img/solution-diags.drawio.png "Solution")
+
 ### 🔑 Key Components
 
 - **🌍 VPC and Cluster:**
@@ -92,7 +94,7 @@ Alternatively, you can also check the application by curling the ALB endpoint. Y
 LocalStack console or by running the following command:
 
 ```bash
-awslocal elbv2 describe-load-balancers --names serviceslb --query 'LoadBalancers[0].DNSName'
+awslocal elbv2 describe-load-balancers --query 'LoadBalancers[0].DNSName'
 ```
 
 Now you can curl the endpoint using the following command:
