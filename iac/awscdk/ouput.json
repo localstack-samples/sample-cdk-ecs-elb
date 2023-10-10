@@ -1,5 +1,0 @@
-{
-  "RepoStack": {
-    "serviceslb": "serviceslb.elb.localhost.localstack.cloud"
-  }
-}
