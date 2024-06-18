@@ -22,7 +22,6 @@ export class RepoStack extends cdk.Stack {
             platform: Platform.LINUX_AMD64,
         });
 
-        // task definition
         const taskDefinition = new ecs.FargateTaskDefinition(this, "MyFargateTask", {
             cpu: 512,
             memoryLimitMiB: 2048,
@@ -31,7 +30,7 @@ export class RepoStack extends cdk.Stack {
         taskDefinition.addVolume({
             name: 'local-src',
             host: {
-                sourcePath: path.join(__dirname, '../../../src')
+                sourcePath: path.join(__dirname, '../../../src/app')
             }
         });
 
@@ -43,10 +42,10 @@ export class RepoStack extends cdk.Stack {
         });
 
         container.addPortMappings({
-            containerPort: 3000,
-            hostPort: 3000
+            containerPort: 3000
         });
 
+        // Match the container path with the Dockerfile WORKDIR
         container.addMountPoints({
             containerPath: '/app',
             sourceVolume: 'local-src',
