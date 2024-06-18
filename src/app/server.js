@@ -2,7 +2,7 @@ const http = require('http')
 
 const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({message: "Hello, Welcome to Localstack!"}))
+    res.end(JSON.stringify({message: "csnn nd Localstack!"}))
 })
 
 const PORT = 3000
