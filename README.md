@@ -168,12 +168,6 @@ Node.js applications. 🛠️🔍
 
 First, we need to configure LocalStack to enable remote debugging of Node.js applications. In devops-tooling/docker-compose.yml file, uncomment **ECS_DOCKER_FLAGS** line to enable required configuration for remote debugging. 
 
-<<<<<<< HEAD
-=======
-   ```bash
-    export ECS_DOCKER_FLAGS="-e NODE_OPTIONS=--inspect-brk=0.0.0.0:9229 -p 9229:9229"
-  ```
->>>>>>> main
 
 2️⃣ **Adding a Task to Wait for Remote Debugger Server** 🕰️
 
