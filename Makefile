@@ -46,7 +46,7 @@ start-localstack:
 	cd devops-tooling && docker compose -p $(APP_NAME) up
 
 stop-localstack:
-	cd devops-tooling && docker compose down
+	cd devops-tooling && docker compose -p $(APP_NAME) down
 
 
 PKG_SUB_DIRS := $(dir $(shell find . -type d -name node_modules -prune -o -type d -name "venv*" -prune -o -type f -name package.json -print))

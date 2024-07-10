@@ -65,7 +65,7 @@ make install
 Start the LocalStack server using the following command:
 
 ```bash
-export LOCALSTACK_API_KEY=<YOUR_API_KEY>
+export LOCALSTACK_AUTH_TOKEN=<YOUR_AUTH_TOKEN>
 make start-localstack
 ```
 
@@ -166,12 +166,8 @@ Node.js applications. 🛠️🔍
 
 1️⃣ **Configure LocalStack for remote Node.js debugging** 🛠️
 
-First, we need to configure LocalStack to enable remote debugging of Node.js applications. To do so, we need to set
-the `ECS_DOCKER_FLAGS` to enable the debugger using `NODE_OPTIONS`:
+First, we need to configure LocalStack to enable remote debugging of Node.js applications. In devops-tooling/docker-compose.yml file, uncomment **ECS_DOCKER_FLAGS** line to enable required configuration for remote debugging. 
 
-   ```bash
-    export ECS_DOCKER_FLAGS="-e NODE_OPTIONS=--inspect-brk=0.0.0.0:9229 -p 9229:9229"
-  ```
 
 2️⃣ **Adding a Task to Wait for Remote Debugger Server** 🕰️
 
@@ -205,7 +201,7 @@ existing one from the *Run and Debug* tab, then add the following configuration.
       "localRoot": "${workspaceFolder}",
       "name": "Attach to Remote Node.js",
       "port": 9229,
-      "remoteRoot": "/var/task/",
+      "remoteRoot": "/app",
       "request": "attach",
       "type": "node",
       "preLaunchTask": "Wait Remote Debugger Server"
@@ -214,7 +210,16 @@ existing one from the *Run and Debug* tab, then add the following configuration.
 }
    ```
 
-4️⃣ **Running the Debugger** 🏃
+4️⃣ **Start LocalStack**
+
+Start the LocalStack server using the following command:
+
+```bash
+export LOCALSTACK_AUTH_TOKEN=<YOUR_AUTH_TOKEN>
+make start-localstack
+```
+
+5️⃣ **Running the Debugger** 🏃
 
 Finally, run the debugger by selecting the *Attach to Remote Node.js* configuration from the *Run and Debug* tab. You
 can now set breakpoints and debug your Node.js application running in a Docker container. 🐳

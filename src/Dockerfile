@@ -1,17 +1,13 @@
 FROM node:20-alpine3.17
 
-# Create app directory
-RUN mkdir -p /usr/src/app
-# Set working directory
-WORKDIR /usr/src/app
-# Copy app source code
-COPY app .
+RUN mkdir -p /app
+WORKDIR /app
 
-# Install app dependencies
+COPY app/package.json .
 RUN npm install
 
-# Expose port
+COPY app .
+
 EXPOSE 3000
 
-# Start command
-CMD [ "npm", "run", "start" ]
+CMD [ "node", "--watch", "server.js" ]
