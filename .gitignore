@@ -1,4 +1,4 @@
 .vscode
 .idea
 iac/awscdk/output.json
-.env-gdc-local
+logs.txt
