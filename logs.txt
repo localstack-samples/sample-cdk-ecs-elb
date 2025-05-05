@@ -1,0 +1,183 @@
+
+LocalStack version: 4.3.1.dev93
+LocalStack build date: 2025-05-05
+LocalStack build git hash: 6acdef4e5
+
+2025-05-05T16:13:22.306  INFO --- [  MainThread] l.p.c.b.licensingv2        : Successfully activated cached license d3f0d502-2c3a-48c7-a610-0d4067437742:enterprise from /etc/localstack/conf.d/license.json 🔑✅
+2025-05-05T16:13:23.145  INFO --- [  MainThread] l.p.c.extensions.platform  : loaded 1 extensions
+2025-05-05T16:13:23.146  INFO --- [  MainThread] mailhog.extension          : starting mailhog server
+2025-05-05T16:13:23.146  INFO --- [  MainThread] mailhog.extension          : configuring SMTP host to internal mailhog smtp: localhost:25
+2025-05-05T16:13:23.221  INFO --- [ady_monitor)] mailhog.extension          : serving mailhog extension on host: http://mailhog.localhost.localstack.cloud:4566
+2025-05-05T16:13:23.221  INFO --- [ady_monitor)] mailhog.extension          : serving mailhog extension on path: http://localhost:4566/_extension/mailhog/
+Ready.
+2025-05-05T16:13:30.360  INFO --- [et.reactor-0] localstack.request.aws     : AWS sts.GetCallerIdentity => 200
+2025-05-05T16:13:30.591  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 400 (ValidationError)
+2025-05-05T16:13:30.610  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 400 (ValidationError)
+2025-05-05T16:13:30.629  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 400 (ValidationError)
+2025-05-05T16:13:30.660  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.CreateChangeSet => 200
+2025-05-05T16:13:30.665  WARN --- [et.reactor-0] l.aws.protocol.serializer  : Response object DescribeChangeSetOutput contains a member which is not specified: ClientToken
+2025-05-05T16:13:30.666  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.DescribeChangeSet => 200
+2025-05-05T16:13:30.672  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.ExecuteChangeSet => 200
+2025-05-05T16:13:30.676  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2025-05-05T16:13:31.123  INFO --- [et.reactor-0] l.p.c.services.s3.provider : Using /tmp/localstack/state/s3 as storage path for s3 assets
+2025-05-05T16:13:31.386  INFO --- [et.reactor-0] l.p.c.s.ecr.registry       : Starting ECR Docker registry (ECR_ENDPOINT_STRATEGY=domain) for region us-east-1 in account 000000000000
+2025-05-05T16:13:31.900  INFO --- [et.reactor-1] localstack.request.http    : GET /v2/ => 200
+2025-05-05T16:13:31.901  WARN --- [et.reactor-0] l.aws.protocol.serializer  : Response object CreateRepositoryResponse contains a member which is not specified: tag
+2025-05-05T16:13:32.523  INFO --- [et.reactor-0] l.services.events.provider : {"InfoCode": "InternalInfoEvents at process_rules", "InfoMessage": "No rules attached to event_bus: default"}
+2025-05-05T16:13:32.692  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:13:34.740  INFO --- [et.reactor-1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:13:35.707  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2025-05-05T16:13:35.721  INFO --- [et.reactor-1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:13:37.988  INFO --- [et.reactor-0] localstack.request.aws     : AWS sts.AssumeRole => 200
+2025-05-05T16:13:37.989  INFO --- [et.reactor-2] localstack.request.aws     : AWS sts.AssumeRole => 200
+2025-05-05T16:13:37.990  INFO --- [et.reactor-1] localstack.request.aws     : AWS sts.AssumeRole => 200
+2025-05-05T16:13:38.057  INFO --- [et.reactor-2] localstack.request.aws     : AWS ecr.DescribeRepositories => 200
+2025-05-05T16:13:38.060  INFO --- [et.reactor-0] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2025-05-05T16:13:38.061  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2025-05-05T16:13:38.087  INFO --- [et.reactor-1] localstack.request.http    : GET /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/tags/list => 404
+2025-05-05T16:13:38.089  INFO --- [et.reactor-2] localstack.request.aws     : AWS ecr.DescribeImages => 400 (ImageNotFoundException)
+2025-05-05T16:13:38.098  INFO --- [et.reactor-1] localstack.request.aws     : AWS sts.AssumeRole => 200
+2025-05-05T16:13:38.106  INFO --- [et.reactor-2] localstack.request.aws     : AWS ssm.GetParameter => 200
+2025-05-05T16:13:38.118  INFO --- [et.reactor-1] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2025-05-05T16:13:38.119  INFO --- [et.reactor-2] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2025-05-05T16:13:38.120  INFO --- [et.reactor-0] localstack.request.aws     : AWS ecr.GetAuthorizationToken => 200
+2025-05-05T16:13:38.130  INFO --- [et.reactor-0] localstack.request.aws     : AWS sts.AssumeRole => 200
+2025-05-05T16:13:38.132  INFO --- [et.reactor-1] localstack.request.aws     : AWS sts.AssumeRole => 200
+2025-05-05T16:13:38.146  INFO --- [et.reactor-2] localstack.request.aws     : AWS s3.GetBucketLocation => 200
+2025-05-05T16:13:38.152  INFO --- [et.reactor-0] localstack.request.aws     : AWS s3.GetBucketLocation => 200
+2025-05-05T16:13:38.159  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2025-05-05T16:13:38.160  INFO --- [et.reactor-2] localstack.request.aws     : AWS s3.ListObjectsV2 => 200
+2025-05-05T16:13:38.165  INFO --- [et.reactor-2] localstack.request.aws     : AWS s3.GetBucketEncryption => 200
+2025-05-05T16:13:38.166  INFO --- [et.reactor-0] localstack.request.aws     : AWS s3.GetBucketEncryption => 200
+2025-05-05T16:13:38.183  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.PutObject => 200
+2025-05-05T16:13:38.187  INFO --- [et.reactor-2] localstack.request.aws     : AWS s3.PutObject => 200
+2025-05-05T16:13:38.224  INFO --- [et.reactor-0] localstack.request.http    : GET /v2/ => 200
+2025-05-05T16:13:38.270  INFO --- [et.reactor-1] localstack.request.http    : GET /v2/ => 200
+2025-05-05T16:13:38.477  INFO --- [et.reactor-2] localstack.request.http    : GET /v2/ => 200
+2025-05-05T16:13:38.546  INFO --- [et.reactor-0] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:90d8b6d5728f657f5322538856e0c7469fc66019ea60ed59326f924da595d9e1 => 404
+2025-05-05T16:13:38.559  INFO --- [et.reactor-2] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:1774f2fcacf72961fa9e5dd3b08f1e21c5af4852293e51128133fc33b91dcfae => 404
+2025-05-05T16:13:38.562  INFO --- [et.reactor-1] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:e1988e89b2ea9a3c3253ae2d0213fd138834f47c25d29fcf482bb86d68274368 => 404
+2025-05-05T16:13:38.568  INFO --- [et.reactor-0] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:38d6e550170331b1c64b0e484989a2fdd13364a7bed2bbb6deaba82b317ad4e8 => 404
+2025-05-05T16:13:38.574  INFO --- [et.reactor-3] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 => 404
+2025-05-05T16:13:38.618  INFO --- [et.reactor-3] localstack.request.http    : POST /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/ => 202
+2025-05-05T16:13:38.634  INFO --- [et.reactor-0] localstack.request.http    : POST /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/ => 202
+2025-05-05T16:13:38.635  INFO --- [et.reactor-2] localstack.request.http    : POST /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/ => 202
+2025-05-05T16:13:38.635  INFO --- [et.reactor-1] localstack.request.http    : POST /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/ => 202
+2025-05-05T16:13:38.638  INFO --- [et.reactor-3] localstack.request.http    : POST /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/ => 202
+2025-05-05T16:13:38.647  INFO --- [et.reactor-2] localstack.request.http    : PATCH /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/625de5a5-a790-4bf6-9f85-cc342977a8a7 => 202
+2025-05-05T16:13:38.659  INFO --- [et.reactor-1] localstack.request.http    : PUT /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/625de5a5-a790-4bf6-9f85-cc342977a8a7 => 201
+2025-05-05T16:13:38.663  INFO --- [et.reactor-0] localstack.request.http    : PATCH /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/0455e7b7-bc52-482e-a95e-1e1f8f256c82 => 202
+2025-05-05T16:13:38.665  INFO --- [et.reactor-3] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:90d8b6d5728f657f5322538856e0c7469fc66019ea60ed59326f924da595d9e1 => 200
+2025-05-05T16:13:38.670  INFO --- [et.reactor-2] localstack.request.http    : PUT /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/0455e7b7-bc52-482e-a95e-1e1f8f256c82 => 201
+2025-05-05T16:13:38.685  INFO --- [et.reactor-0] localstack.request.http    : PATCH /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/cce1ef9c-6c30-4259-a068-119b57c0cd3c => 202
+2025-05-05T16:13:38.687  INFO --- [et.reactor-1] localstack.request.http    : PATCH /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/e7401e2f-4953-4bdd-9416-502099cf67e2 => 202
+2025-05-05T16:13:38.688  INFO --- [et.reactor-3] localstack.request.http    : PATCH /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/c3c60229-26d2-43a3-94cc-990fd819f47b => 202
+2025-05-05T16:13:38.688  INFO --- [et.reactor-2] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:38d6e550170331b1c64b0e484989a2fdd13364a7bed2bbb6deaba82b317ad4e8 => 200
+2025-05-05T16:13:38.695  INFO --- [et.reactor-0] localstack.request.http    : PUT /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/cce1ef9c-6c30-4259-a068-119b57c0cd3c => 201
+2025-05-05T16:13:38.698  INFO --- [et.reactor-3] localstack.request.http    : PUT /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/e7401e2f-4953-4bdd-9416-502099cf67e2 => 201
+2025-05-05T16:13:38.700  INFO --- [et.reactor-1] localstack.request.http    : PUT /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/c3c60229-26d2-43a3-94cc-990fd819f47b => 201
+2025-05-05T16:13:38.703  INFO --- [et.reactor-2] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:e1988e89b2ea9a3c3253ae2d0213fd138834f47c25d29fcf482bb86d68274368 => 200
+2025-05-05T16:13:38.708  INFO --- [et.reactor-1] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:1774f2fcacf72961fa9e5dd3b08f1e21c5af4852293e51128133fc33b91dcfae => 200
+2025-05-05T16:13:38.709  INFO --- [et.reactor-0] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 => 200
+2025-05-05T16:13:38.719  INFO --- [et.reactor-3] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:74a11634af6cb6497de97632875b7f009fb52c8a156e0d56e9918cc4475d7c6a => 404
+2025-05-05T16:13:38.743  INFO --- [et.reactor-2] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:d30ccb81ed57889f83014a6d90c713a1d5a6aeba9b53ebc2fb6b0af631dc6bdd => 404
+2025-05-05T16:13:38.771  INFO --- [et.reactor-0] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:854bbbc098b2bd384898ade8460693473cd0cf092247999fc10c7d95356c61d9 => 404
+2025-05-05T16:13:38.775  INFO --- [et.reactor-3] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:1207c741d8c9b028d98c4006013f9de959da3c55f85b91ed5e4583438a0112ca => 404
+2025-05-05T16:13:38.787  INFO --- [et.reactor-1] localstack.request.http    : POST /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/ => 202
+2025-05-05T16:13:38.795  INFO --- [et.reactor-2] localstack.request.http    : POST /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/ => 202
+2025-05-05T16:13:38.799  INFO --- [et.reactor-1] localstack.request.http    : POST /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/ => 202
+2025-05-05T16:13:38.825  INFO --- [et.reactor-0] localstack.request.http    : POST /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/ => 202
+2025-05-05T16:13:38.837  INFO --- [et.reactor-3] localstack.request.http    : PATCH /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/e524efe5-6ff5-4c4b-9570-524e415f40a1 => 202
+2025-05-05T16:13:38.847  INFO --- [et.reactor-2] localstack.request.http    : PUT /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/e524efe5-6ff5-4c4b-9570-524e415f40a1 => 201
+2025-05-05T16:13:38.854  INFO --- [et.reactor-1] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:74a11634af6cb6497de97632875b7f009fb52c8a156e0d56e9918cc4475d7c6a => 200
+2025-05-05T16:13:39.120  INFO --- [et.reactor-0] localstack.request.http    : PATCH /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/3fc8b83a-2e59-4616-96f0-d7e363561bd2 => 202
+2025-05-05T16:13:39.137  INFO --- [et.reactor-3] localstack.request.http    : PATCH /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/b72111a2-5f3d-4e04-ba9f-5a75a376c0e8 => 202
+2025-05-05T16:13:39.141  INFO --- [et.reactor-2] localstack.request.http    : PUT /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/3fc8b83a-2e59-4616-96f0-d7e363561bd2 => 201
+2025-05-05T16:13:39.171  INFO --- [et.reactor-1] localstack.request.http    : PUT /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/b72111a2-5f3d-4e04-ba9f-5a75a376c0e8 => 201
+2025-05-05T16:13:39.172  INFO --- [et.reactor-0] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:d30ccb81ed57889f83014a6d90c713a1d5a6aeba9b53ebc2fb6b0af631dc6bdd => 200
+2025-05-05T16:13:39.180  INFO --- [et.reactor-3] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:1207c741d8c9b028d98c4006013f9de959da3c55f85b91ed5e4583438a0112ca => 200
+2025-05-05T16:13:42.310  INFO --- [et.reactor-2] localstack.request.http    : PATCH /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/28e4f476-b9ea-4ddf-83a7-5433b1b7a17b => 202
+2025-05-05T16:13:42.374  INFO --- [et.reactor-0] localstack.request.http    : PUT /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/28e4f476-b9ea-4ddf-83a7-5433b1b7a17b => 201
+2025-05-05T16:13:42.380  INFO --- [et.reactor-1] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:854bbbc098b2bd384898ade8460693473cd0cf092247999fc10c7d95356c61d9 => 200
+2025-05-05T16:13:42.429  INFO --- [et.reactor-2] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:a2c01c0d9d4e2a7dbbe0042fe9e0c127e99d58b9e60887d5f3ffa18d4a185413 => 404
+2025-05-05T16:13:42.486  INFO --- [et.reactor-0] localstack.request.http    : POST /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/ => 202
+2025-05-05T16:13:42.593  INFO --- [et.reactor-1] localstack.request.http    : PATCH /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/017bb3d8-29f0-4752-a0e3-db34c39f7a8a => 202
+2025-05-05T16:13:42.602  INFO --- [et.reactor-3] localstack.request.http    : PUT /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/uploads/017bb3d8-29f0-4752-a0e3-db34c39f7a8a => 201
+2025-05-05T16:13:42.608  INFO --- [et.reactor-2] localstack.request.http    : HEAD /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/blobs/sha256:a2c01c0d9d4e2a7dbbe0042fe9e0c127e99d58b9e60887d5f3ffa18d4a185413 => 200
+2025-05-05T16:13:42.622  INFO --- [-functhread7] l.p.c.s.ecr.provider       : We got a push to cdk-hnb659fds-container-assets-000000000000-us-east-1 with tag 6131dc23a2a76bd948edfa868e600ca272b79dc7da60d7d9c41f987c2e3a0bc7 with manifest content type application/vnd.docker.distribution.manifest.v2+json
+2025-05-05T16:13:42.623  INFO --- [et.reactor-0] localstack.request.http    : PUT /v2/cdk-hnb659fds-container-assets-000000000000-us-east-1/manifests/6131dc23a2a76bd948edfa868e600ca272b79dc7da60d7d9c41f987c2e3a0bc7 => 201
+2025-05-05T16:13:42.671  INFO --- [et.reactor-1] localstack.request.aws     : AWS sts.AssumeRole => 200
+2025-05-05T16:13:42.679  INFO --- [et.reactor-3] localstack.request.aws     : AWS cloudformation.DescribeStacks => 400 (ValidationError)
+2025-05-05T16:13:42.694  INFO --- [et.reactor-2] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2025-05-05T16:13:42.703  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2025-05-05T16:13:42.733  INFO --- [et.reactor-3] localstack.request.aws     : AWS s3.GetObject => 200
+2025-05-05T16:13:42.756  INFO --- [et.reactor-1] localstack.request.aws     : AWS cloudformation.CreateChangeSet => 200
+2025-05-05T16:13:42.763  WARN --- [et.reactor-0] l.aws.protocol.serializer  : Response object DescribeChangeSetOutput contains a member which is not specified: RoleARN
+2025-05-05T16:13:42.763  WARN --- [et.reactor-0] l.aws.protocol.serializer  : Response object DescribeChangeSetOutput contains a member which is not specified: ClientToken
+2025-05-05T16:13:42.763  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.DescribeChangeSet => 200
+2025-05-05T16:13:42.771  INFO --- [et.reactor-1] localstack.request.aws     : AWS cloudformation.ExecuteChangeSet => 200
+2025-05-05T16:13:42.776  INFO --- [et.reactor-3] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2025-05-05T16:13:43.537  INFO --- [et.reactor-1] l.p.c.s.e.l.firelens       : Enabling ECS firelens feature
+2025-05-05T16:13:44.866  INFO --- [et.reactor-3] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:13:46.944  INFO --- [et.reactor-1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:13:47.790  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2025-05-05T16:13:48.979  INFO --- [et.reactor-3] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:13:51.006  INFO --- [et.reactor-1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:13:52.801  INFO --- [et.reactor-3] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2025-05-05T16:13:53.044  INFO --- [et.reactor-2] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:13:55.077  INFO --- [et.reactor-1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:13:55.211  INFO --- [b7:$LATEST_0] l.u.container_networking   : Determined main container network: bridge
+2025-05-05T16:13:55.214  INFO --- [b7:$LATEST_0] l.u.container_networking   : Determined main container target IP: 192.168.215.2
+2025-05-05T16:13:56.581  INFO --- [et.reactor-1] localstack.request.http    : POST /_localstack_lambda/bde3961eb8f3a8bf7b54b6cb5bcfaa61/status/bde3961eb8f3a8bf7b54b6cb5bcfaa61/ready => 202
+2025-05-05T16:13:57.001  INFO --- [et.reactor-0] localstack.request.aws     : AWS ec2.RevokeSecurityGroupEgress => 200
+2025-05-05T16:13:57.040  INFO --- [et.reactor-3] localstack.request.aws     : AWS ec2.RevokeSecurityGroupIngress => 400 (InvalidPermission.NotFound)
+2025-05-05T16:13:57.099  INFO --- [et.reactor-2] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:13:57.116  WARN --- [et.reactor-1] l.s.s3.presigned_url       : Signatures do not match, but not raising an error, as S3_SKIP_SIGNATURE_VALIDATION=1
+2025-05-05T16:13:57.117  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.PutObject => 200
+2025-05-05T16:13:57.165  INFO --- [et.reactor-0] localstack.request.http    : POST /_localstack_lambda/bde3961eb8f3a8bf7b54b6cb5bcfaa61/invocations/6f34d95a-d77b-4172-a2e6-3dc2c7a299b5/logs => 202
+2025-05-05T16:13:57.166  INFO --- [et.reactor-3] localstack.request.http    : POST /_localstack_lambda/bde3961eb8f3a8bf7b54b6cb5bcfaa61/invocations/6f34d95a-d77b-4172-a2e6-3dc2c7a299b5/response => 202
+2025-05-05T16:13:57.456  WARN --- [et.reactor-0] l.aws.protocol.serializer  : Response object TaskSet contains a member which is not specified: regionName
+2025-05-05T16:13:57.456  WARN --- [et.reactor-0] l.aws.protocol.serializer  : Response object TaskSet contains a member which is not specified: clientToken
+2025-05-05T16:13:57.474  INFO --- [et.reactor-3] l.u.container_networking   : Determined main container target IP: 192.168.215.2
+2025-05-05T16:13:57.708  INFO --- [et.reactor-3] l.u.container_networking   : Determined main container target IP: 192.168.215.2
+2025-05-05T16:13:57.711  INFO --- [   Thread-29] l.p.c.s.e.container_execut : Starting ECS task in Docker: image 000000000000.dkr.ecr.us-east-1.localhost.localstack.cloud:4566/cdk-hnb659fds-container-assets-000000000000-us-east-1:6131dc23a2a76bd948edfa868e600ca272b79dc7da60d7d9c41f987c2e3a0bc7, container ls-ecs-Services-cca3cea6-e2cf-404e-8a28-98d4bff64828-0-b8d37d59, command None
+2025-05-05T16:13:57.716  INFO --- [et.reactor-1] l.services.events.provider : {"InfoCode": "InternalInfoEvents at process_rules", "InfoMessage": "No rules attached to event_bus: default"}
+2025-05-05T16:13:57.814  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2025-05-05T16:13:57.844  WARN --- [et.reactor-2] l.aws.protocol.serializer  : Response object Service contains a member which is not specified: clusterName
+2025-05-05T16:13:57.844  WARN --- [et.reactor-2] l.aws.protocol.serializer  : Response object Service contains a member which is not specified: regionName
+2025-05-05T16:13:57.844  WARN --- [et.reactor-2] l.aws.protocol.serializer  : Response object Service contains a member which is not specified: enableEcsManagedTags
+2025-05-05T16:13:59.134  INFO --- [et.reactor-2] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:14:01.195  INFO --- [et.reactor-1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:14:02.823  INFO --- [et.reactor-2] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2025-05-05T16:14:02.834  INFO --- [et.reactor-1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:17:18.773  INFO --- [et.reactor-0] localstack.request.http    : GET / => 200
+2025-05-05T16:17:21.774  INFO --- [et.reactor-3] localstack.request.http    : GET / => 200
+2025-05-05T16:17:30.381  INFO --- [et.reactor-1] localstack.request.aws     : AWS sts.AssumeRole => 200
+2025-05-05T16:17:30.400  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.DescribeStacks => 200
+2025-05-05T16:17:30.453  INFO --- [-73 (worker)] l.p.c.s.e.t.docker         : Stopping Docker container ls-ecs-Services-cca3cea6-e2cf-404e-8a28-98d4bff64828-0-b8d37d59 for ECS task arn:aws:ecs:us-east-1:000000000000:task/Services/cca3cea6-e2cf-404e-8a28-98d4bff64828
+2025-05-05T16:17:30.574  WARN --- [et.reactor-2] l.aws.protocol.serializer  : Response object Service contains a member which is not specified: clusterName
+2025-05-05T16:17:30.574  WARN --- [et.reactor-2] l.aws.protocol.serializer  : Response object Service contains a member which is not specified: regionName
+2025-05-05T16:17:30.574  WARN --- [et.reactor-2] l.aws.protocol.serializer  : Response object Service contains a member which is not specified: enableEcsManagedTags
+2025-05-05T16:17:30.595  WARN --- [et.reactor-0] l.aws.protocol.serializer  : Response object Service contains a member which is not specified: clusterName
+2025-05-05T16:17:30.595  WARN --- [et.reactor-0] l.aws.protocol.serializer  : Response object Service contains a member which is not specified: regionName
+2025-05-05T16:17:30.595  WARN --- [et.reactor-0] l.aws.protocol.serializer  : Response object Service contains a member which is not specified: enableEcsManagedTags
+2025-05-05T16:17:32.437  INFO --- [et.reactor-2] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:17:34.508  INFO --- [et.reactor-0] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:17:35.712  INFO --- [et.reactor-0] localstack.request.aws     : AWS ec2.AuthorizeSecurityGroupIngress => 200
+2025-05-05T16:17:35.732  INFO --- [et.reactor-1] localstack.request.aws     : AWS ec2.AuthorizeSecurityGroupEgress => 200
+2025-05-05T16:17:35.765  WARN --- [et.reactor-2] l.s.s3.presigned_url       : Signatures do not match, but not raising an error, as S3_SKIP_SIGNATURE_VALIDATION=1
+2025-05-05T16:17:35.768  INFO --- [et.reactor-2] localstack.request.aws     : AWS s3.PutObject => 200
+2025-05-05T16:17:35.814  INFO --- [et.reactor-0] localstack.request.http    : POST /_localstack_lambda/bde3961eb8f3a8bf7b54b6cb5bcfaa61/invocations/ce3d7118-674d-471f-a064-94b99f9af0bb/logs => 202
+2025-05-05T16:17:35.815  INFO --- [et.reactor-1] localstack.request.http    : POST /_localstack_lambda/bde3961eb8f3a8bf7b54b6cb5bcfaa61/invocations/ce3d7118-674d-471f-a064-94b99f9af0bb/response => 202
+2025-05-05T16:17:36.552  INFO --- [et.reactor-1] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 200
+2025-05-05T16:17:37.679 ERROR --- [et.reactor-3] l.s.c.e.template_deployer  : Failed to delete resource with id VPCRestrictDefaultSecurityGroupCustomResource59474679. Reason: Error: DELETE: cannot change the physical resource ID from "undefined" to "undefined" during deletion
+    at renderResponse (/var/task/__entrypoint__.js:1:1832)
+    at Runtime.handler (/var/task/__entrypoint__.js:1:988)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+NoneType: None
+2025-05-05T16:17:37.890  WARN --- [et.reactor-2] l.aws.protocol.serializer  : Response object Cluster contains a member which is not specified: regionName
+2025-05-05T16:17:37.890  WARN --- [et.reactor-2] l.aws.protocol.serializer  : Response object Cluster contains a member which is not specified: accountId
+2025-05-05T16:17:37.918  INFO --- [et.reactor-3] localstack.request.aws     : AWS cloudformation.DeleteStack => 200
+2025-05-05T16:17:37.927  INFO --- [et.reactor-1] localstack.request.aws     : AWS cloudformation.DescribeStacks => 400 (ValidationError)
+2025-05-05T16:17:37.937  INFO --- [et.reactor-3] localstack.request.aws     : AWS cloudformation.DescribeStackEvents => 400 (ValidationError)
+
