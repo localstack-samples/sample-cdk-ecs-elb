@@ -21,7 +21,7 @@ describe('User API', function () {
 
         // Assert the body
         expect(response.data).to.be.an('object')
-        expect(response.data).to.have.property('message', "Hello, Welcome to Localstack!")
+        expect(response.data).to.have.property('message', "Hi LocalStack!")
         expect(response.data.message).to.be.a('string')
     })
 })
