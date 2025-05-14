@@ -66,7 +66,7 @@ Start the LocalStack server using the following command:
 
 ```bash
 export LOCALSTACK_AUTH_TOKEN=<YOUR_AUTH_TOKEN>
-make start-localstack
+make start
 ```
 
 ### Step 2: Deploy the Application 🚢
@@ -74,7 +74,7 @@ make start-localstack
 Deploy your application locally using the following command:
 
 ```bash
-make deploy-local
+make deploy
 ```
 
 This command will deploy your application to the LocalStack. Ensure that there are no errors.
@@ -84,7 +84,7 @@ This command will deploy your application to the LocalStack. Ensure that there a
 Run the application test cases using the following command:
 
 ```bash
-make test-local
+make test
 ```
 
 Ensure that all test cases pass and pay attention to any output that is displayed. This step should validate that the
@@ -100,7 +100,7 @@ awslocal elbv2 describe-load-balancers --query 'LoadBalancers[0].DNSName'
 Now you can curl the endpoint using the following command:
 
 ```bash
-make curl-local
+make curl
 ```
 
 The output should be similar to the following:
@@ -114,7 +114,7 @@ The output should be similar to the following:
 To delete the application from LocalStack, run the following command:
 
 ```bash
-make destroy-local
+make destroy
 ```
 
 ## Deploying the Application on AWS ☁️
@@ -124,7 +124,7 @@ make destroy-local
 Deploy your application to AWS using the following command:
 
 ```bash
-make deploy
+make deploy-aws
 ```
 
 This command will deploy your application to AWS. Ensure that there are no errors.
@@ -134,7 +134,7 @@ This command will deploy your application to AWS. Ensure that there are no error
 Run the application test cases using the following command:
 
 ```bash
-make test
+make test-aws
 ```
 
 Alternatively, you can also check the application by curling the ALB endpoint. You can find the ALB endpoint in the AWS
@@ -155,7 +155,7 @@ The output should be similar to the following:
 To delete the application from AWS, run the following command:
 
 ```bash
-make destroy
+make destroy-aws
 ```
 
 ## 🚀 Configuring Visual Studio Code for Efficient Remote Node.js Debugging
